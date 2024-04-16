@@ -1,0 +1,91 @@
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+/*tipo y hubicacion de letra*/
+<style> body{
+  font-family:time roman; 
+  text-align: center; 
+  margin: 0px auto; 
+  padding-top:30px;
+}
+/*forma y tamaño del swicht*/
+.switch{
+  position:relative;
+  display:inline-block;
+  width:60px;
+  height:34px;
+}
+/*cambia marcador por swicht*/
+.switch input{
+ display:none;
+}
+/*tamaño y color dentro del swicht*/
+.slider{
+  position:absolute;
+  top:1;
+  left:0;
+  right:0;
+  bottom:0;
+  /* color gris en haxadecimal*/
+  background-color:#ccc;
+  border-radius:40px;
+}
+/*tamaño y forma del del cursor */
+.slider:before{
+  position:absolute;
+  content:"";
+  height:26px;
+  width:26px;
+left:4px;
+bottom:4px;
+/* color blanco en haxadecimal*/
+background-color:#fff;
+-webkit-transition:.4s;
+transition:.4s;
+border-radius:24px
+}
+/* color del cursor al mover en haxadecimal*/ 
+input:checked+.slider{
+/* color rojo en haxadecimal*/
+  background-color:#FF3333;
+}
+/*deslizamiento del cursor izquierda y derecha  */
+input:checked+.slider:before{
+-webkit-transform:translateX(26px);
+-ms-transform:translateX(26px);
+transform:translateX(26px)
+}
+/*lo que el swicht envia al esp */
+</style>
+<script>function toggleCheckbox(element) 
+{ var xhr = new XMLHttpRequest(); 
+if(element.checked)
+{
+xhr.open("GET", "/?relay=off", true);
+} 
+else {
+xhr.open("GET", "/?relay=on", true);
+} 
+xhr.send();
+}
+
+</script>
+</head>
+<body>
+<h1>Mi casa </h1>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" %s>
+<span class="slider"></span>
+</label>
+<h3> OFF ON</h3>
+
+
+<h1>Mi casa </h1>
+<label class="switch">
+<input type="checkbox" onchange="toggleCheckbox(this)" %s>
+<span class="slider"></span>
+</label>
+<h3> OFF ON</h3>
+
+</body></html>""" % (relay_state)
+ 

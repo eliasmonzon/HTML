@@ -1,0 +1,114 @@
+
+<center>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FF3333;
+
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+ 
+  }
+ 
+
+</style>
+</head>
+<body>
+
+<h2>Luces de casa </h2>
+
+<h3> Dormitorio</h3>
+<label class="switch">
+<input type="checkbox"checked>
+<span class="slider Round"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>OFF               ON</p>
+</label><br><br>
+
+<h3> Dormitorio 2</h3>
+<label class="switch">
+<input type="checkbox"checked>
+<span class="slider Round"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<p>OFF               ON</p>
+</label><br><br>
+
+<h3>Baño</h3>
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider round"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<p>OFF               ON</p>
+ </label><br><br>
+
+<h3>Living</h3>
+<label class="switch">
+<input type="checkbox"checked>
+<span class="slider Round"></span>
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+<p>OFF               ON</p>
+</label><br><br>
+
+
+
+
+</body>
+</html>
+</center> 
+
+
